@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+	
+	<groupId>me.hdpe</groupId>
+	<artifactId>modules-blog-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>app</module>
+		<module>diary-api</module>
+		<module>diary-service</module>
+		<module>spring</module>
+		<module>web</module>
+	</modules>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>modules-blog-diary-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>modules-blog-diary-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+						
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>modules-blog-spring</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>modules-blog-web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>22.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
